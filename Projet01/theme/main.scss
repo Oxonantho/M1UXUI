@@ -1,0 +1,184 @@
+@use '_variables' as *;
+
+html, body{
+    font-size: $font-size-m;
+    font-family: 'Open Sans', sans-serif;    
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+// style sidebar and header
+
+.sidebar{
+    display: flex;
+    padding: 1.563rem 0.625rem;
+    flex-direction: column;
+    align-items: center;
+    width: 20.83%;
+    height: 100%;
+    position: fixed; 
+    border-right: solid $color-line-stroke 1px;  
+    h1 { 
+        font-size:1.25rem;
+        color:$color-brand;
+        text-transform: uppercase;
+        line-height: 1.688rem;
+        margin-bottom: 2rem;
+    }
+}
+
+nav{
+    width: 100%;
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    .s-title_Element{
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-title-nav;
+        margin: 2rem 0 0.625rem 0 ;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .s-li_niveau_initial{
+            display: flex;
+            font-weight: 600;
+            font-size:1.125rem;
+            align-items: center;
+            width: 100%;
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                i{
+                    font-size: 1.5rem;
+                    color: $color-p;
+                    padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+                }
+                p{
+                    padding-left: 0.75rem;
+                    color: $color-p;
+                } text-decoration: none;
+            }
+            
+        }
+    }
+
+}
+.su-li_niveau_initial{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .sl-btn_niveau_initial{
+        display: flex;
+        font-weight: 600;
+        font-size:1.125rem;
+        align-items: center;
+        width: 100%;
+        i{
+            font-size: 1.5rem;
+            color: $color-p;
+            padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+        }
+        p{
+            padding-left: 0.75rem;
+            color: $color-p;
+        } text-decoration: none;
+    }
+}
+
+.su-btn_niveau_second{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: $color-p;
+}
+
+// Main content
+
+.content{
+    width: 77.85%;
+    padding: 0 0 0 22.15%;
+    .c_container{
+        display: flex;
+        flex-direction: column;
+        background-color:$color-p ;
+        padding: 1.25rem;
+        justify-content: flex-end;
+        .c_element_top_bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.5rem;
+            .cce_btn_select_date{
+                background-color: $color-btn;
+                padding: 0.625rem 1.563rem;
+                display: flex;
+                justify-content: space-around; 
+                align-items: center;
+                gap: 0.625rem;
+                p {
+                    color:$color-p-btn;
+                    font-size: 1rem;
+                    margin: 0;
+                }
+                i{
+                    color:$color-p,
+                }
+            }
+            .cc_photo_profil{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.25rem;
+                img{
+                    width: 2.5rem;
+                }
+                .ri-arrow-drop-down-fill{
+                    color:$color-btn;
+                }
+            }
+        }   
+    }
+}
+.c_container{
+    .cc_container_infos{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: $color-p-white;
+            span{
+                font-weight: bold;
+            }
+        }
+        .s-title_Element{
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-p-white;
+            margin: 2rem 0 0.625rem 0 ;
+        }    
+    }
+}
+
+.cv_info{
+    .cv_stard_card{
+        i{
+            background-color: $color-btn-icon;
+            padding: 1.438rem;
+            font-size: 2.5rem;
+        }
+    }
+}
