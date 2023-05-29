@@ -7,6 +7,10 @@ html, body {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 .sidebar {
   display: flex;
   padding: 1.563rem 0.625rem;
@@ -148,7 +152,14 @@ nav ul .s-li_niveau_initial a p {
 
 .c_container .cc_container_infos {
   display: flex;
+  flex-direction: row;
+  gap: 2.125rem;
+  margin-bottom: 2.875rem;
+}
+.c_container .cc_container_infos .ccc_container_name_infos {
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .c_container .cc_container_infos h2 {
   font-size: 2.5rem;
@@ -158,16 +169,109 @@ nav ul .s-li_niveau_initial a p {
 .c_container .cc_container_infos h2 span {
   font-weight: bold;
 }
-.c_container .cc_container_infos .s-title_Element {
+.c_container .cc_container_infos .cc_vue {
+  gap: 0.313rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.c_container .cc_container_infos .cc_vue .s-title_Element {
   font-size: 0.75rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #F9FAFC;
-  margin: 2rem 0 0.625rem 0;
+  margin: 2rem 0 0 0;
 }
 
-.cv_info .cv_stard_card i {
+.cv_info {
+  display: flex;
+  flex-direction: row;
+  gap: 2.313rem;
+}
+
+.cv_stard_card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.125rem;
+  align-items: center;
+  justify-content: center;
+}
+.cv_stard_card i {
   background-color: #2B3855;
   padding: 1.438rem;
   font-size: 2.5rem;
+  border-radius: 1.25rem;
+}
+.cv_stard_card .cvs_text_info {
+  color: #F9FAFC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cv_stard_card .cvs_text_info p {
+  margin: 0;
+}
+.cv_stard_card .cvs_text_info .cvst_number {
+  font-weight: 700;
+  font-size: 2.188rem;
+}
+
+.ri-award-fill {
+  color: #E9971D;
+}
+
+.ri-bar-chart-fill {
+  color: #EC5959;
+}
+
+.ri-calendar-check-line {
+  color: #1DE987;
+}
+
+.ccc_container_cours {
+  color: #F9FAFC;
+  margin-top: 3rem;
+  width: 33.33%;
+}
+.ccc_container_cours .cccc_title {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.cccc_list_matter {
+  background-color: #2B3855;
+  padding: 0.625rem;
+  gap: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.cccc_list_matter li {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  gap: 0.625rem;
+}
+.cccc_list_matter p {
+  margin: 0px;
+  padding: 0px;
+}
+.cccc_list_matter .clm_graphic_element {
+  display: flex;
+  width: 4px;
+  min-height: 100%;
+  background-color: #1DE987;
+  border-radius: 50px;
+}
+.cccc_list_matter li:nth-child(2n) .clm_graphic_element {
+  background-color: #24BEE0 !important;
+}
+.cccc_list_matter .clm_text {
+  display: flex;
+  flex-direction: column;
+}
+.cccc_list_matter .clm_text p {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

@@ -8,6 +8,9 @@ html, body{
     padding: 0;
     margin: 0;
 }
+ul{
+    list-style: none;
+}
 
 // style sidebar and header
 
@@ -154,7 +157,14 @@ nav{
 .c_container{
     .cc_container_infos{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 2.125rem;
+        margin-bottom: 2.875rem;
+        .ccc_container_name_infos{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         h2{
             font-size: 2.5rem;
             font-weight: 400;
@@ -163,22 +173,108 @@ nav{
                 font-weight: bold;
             }
         }
-        .s-title_Element{
-            font-size: 0.75rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: $color-p-white;
-            margin: 2rem 0 0.625rem 0 ;
-        }    
+        .cc_vue{
+            gap: 0.313rem;
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+                .s-title_Element{
+                    font-size: 0.75rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $color-p-white;
+                    margin: 2rem 0 0 0 ;
+                }   
+            }
+         
     }
 }
 
 .cv_info{
-    .cv_stard_card{
-        i{
-            background-color: $color-btn-icon;
-            padding: 1.438rem;
-            font-size: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2.313rem;
+}
+.cv_stard_card{
+    display: flex;
+    flex-direction: row;
+    gap: 1.125rem;
+    align-items: center;
+    justify-content: center;
+    i{
+        background-color:$color-btn-icon;
+        padding: 1.438rem;
+        font-size: 2.5rem;
+        border-radius: 1.25rem;
+    }
+    .cvs_text_info{
+        color: $color-p-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            margin: 0;
+        }
+        .cvst_number{
+            font-weight: 700;
+            font-size: 2.188rem;
+        }
+    }
+}
+.ri-award-fill{
+    color: $color-item-icon-orange;
+}
+.ri-bar-chart-fill{
+    color: $color-item-icon-red;
+}
+.ri-calendar-check-line{
+    color: $color-item-icon-green;
+}
+
+.ccc_container_cours{
+    color: $color-p-white;
+    margin-top: 3rem;
+    width: 33.33%;
+    .cccc_title{
+        margin-top: 0px;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+}
+.cccc_list_matter{
+    background-color: $color-btn-icon;
+    padding: 0.625rem;
+    gap: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    
+    li{
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        gap: 0.625rem;
+    }
+    p{
+        margin:0px;
+        padding: 0px;
+    }
+    .clm_graphic_element{
+        display: flex;
+        width: 4px;
+        min-height: 100%;
+        background-color: $color-item-icon-green;
+        border-radius: 50px
+    }
+    li:nth-child(2n) .clm_graphic_element{
+        background-color: $color-item-list!important;
+    }
+    .clm_text{
+        display: flex;
+        flex-direction: column;
+        p{
+            display: flex;
+            flex-direction: column;
         }
     }
 }
