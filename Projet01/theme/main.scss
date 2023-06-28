@@ -1,4 +1,6 @@
 @use '_variables' as *;
+@use '_mixins.scss' as *;
+
 
 html, body{
     font-size: $font-size-m;
@@ -7,12 +9,23 @@ html, body{
     height: 100%;
     padding: 0;
     margin: 0;
+    background-color: #F9FAFC;
+    overflow-x: hidden;
+
+    @include for-phone-only{
+        font-size: $font-size-s;
+    }
 }
 ul{
     list-style: none;
 }
 
-// style sidebar and header
+
+.box_content{
+    display: flex;
+}
+
+/*style sidebar and header*/
 
 .sidebar{
     display: flex;
@@ -21,6 +34,7 @@ ul{
     align-items: center;
     width: 20.83%;
     height: 100%;
+    z-index: 1;
     position: fixed; 
     border-right: solid $color-line-stroke 1px;  
     h1 { 
@@ -30,13 +44,25 @@ ul{
         line-height: 1.688rem;
         margin-bottom: 2rem;
     }
+    li:hover{
+        @include hover-action-liste;
+    }
+    
 }
 
+
+
+
+nav::-webkit-scrollbar{
+    display: none;
+}
 nav{
     width: 100%;
+    background-color: #F9FAFC;
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
     .s-title_Element{
         font-size: 1rem;
         font-weight: 400;
@@ -111,7 +137,8 @@ nav{
 
 .content{
     width: 77.85%;
-    padding: 0 0 0 22.15%;
+    padding: 0 0 0 22.80%;
+    background-color: #F9FAFC;
     .c_container{
         display: flex;
         flex-direction: column;
@@ -134,7 +161,7 @@ nav{
                     color:$color-p-btn;
                     font-size: 1rem;
                     margin: 0;
-                }
+                } 
                 i{
                     color:$color-p,
                 }
@@ -162,6 +189,7 @@ nav{
         margin-bottom: 2.875rem;
         .ccc_container_name_infos{
             display: flex;
+            width: 66%;
             flex-direction: column;
             justify-content: space-between;
         }
@@ -194,6 +222,7 @@ nav{
     display: flex;
     flex-direction: row;
     gap: 2.313rem;
+    flex-wrap: wrap;
 }
 .cv_stard_card{
     display: flex;
@@ -254,27 +283,123 @@ nav{
         height: 100%;
         flex-direction: row;
         gap: 0.625rem;
+        position: relative;
     }
     p{
         margin:0px;
         padding: 0px;
     }
-    .clm_graphic_element{
-        display: flex;
-        width: 4px;
-        min-height: 100%;
-        background-color: $color-item-icon-green;
-        border-radius: 50px
-    }
-    li:nth-child(2n) .clm_graphic_element{
-        background-color: $color-item-list!important;
+
     }
     .clm_text{
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
         p{
             display: flex;
             flex-direction: column;
         }
     }
+
+
+
+.clm_text::before{
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: $color-item-icon-green;
+    border-radius: 50px;
+    position: absolute;
+    left: 0px;
+}
+
+li:nth-child(even) .clm_text::before{
+    background-color: $color-item-list!important;
+}
+
+.container_allSection{
+    margin:1.25rem 1.875rem ;
+}
+
+.c_doubleColumn{
+    display: flex;
+    gap: 0.813rem;
+    .block_section{
+        width: 100%;
+    }
+
+}
+
+.block_section{
+    padding: 1.25rem 0.813rem;
+    border: solid 1px #BBC6DD;
+    border-radius: 0.625rem ;
+}
+
+.section_top_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    p{
+        color: $color-p-section;
+        margin: 0px;
+    }
+    .btn_select_month{
+        display: flex; 
+        align-items: center;
+        gap: 0.625rem;
+        padding: 0.375rem 0.625rem ;
+    }
+}
+
+.section_content{
+    height: 267px;
+    background-color: white;
+    border-radius: 0.625rem;
+}
+.c_simpleColumn{
+    width: 100%;
+}
+.container_allSection{
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    margin: 1.563rem 1.563rem ;
+}
+
+
+
+/** Section Liste **/
+
+.section_content_list{
+    padding: 8px;
+}
+
+.section_content_list ul::-webkit-scrollbar{
+    display: none;
+}
+.section_content_list ul{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.section_content_list li{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.button_list_action{
+    display: flex;
 }

@@ -1,0 +1,28 @@
+@use '_variables' as *;
+
+/* RESPONSIVE */
+
+@mixin for-phone-only {
+    @media (max-width: $ms) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: $s) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: $m) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: $l) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: $xl) { @content; }
+  }
+
+/* HOVER SIDEBAR */
+
+@mixin hover-action-liste (){
+    background-color: $color-title-nav;
+    a, i, p{
+        color: white;
+    }
+}
